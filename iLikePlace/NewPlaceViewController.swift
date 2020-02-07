@@ -25,7 +25,9 @@ class NewPlaceViewController: UITableViewController {
         super.viewDidLoad()
  
         saveButton.isEnabled = false
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0,
+                                                         width: tableView.frame.size.width,
+                                                         height: 1))
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged )
         
         setupEditScreen()
@@ -34,6 +36,8 @@ class NewPlaceViewController: UITableViewController {
 
     
 // MARK: Table view delegate
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
