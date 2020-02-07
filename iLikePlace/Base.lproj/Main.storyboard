@@ -36,9 +36,9 @@
                                                         <constraint firstAttribute="width" constant="50" id="ZdD-Y2-oHU"/>
                                                         <constraint firstAttribute="height" constant="50" id="rlN-Kb-pJE"/>
                                                     </constraints>
-                                                    <state key="normal" image="map"/>
+                                                    <state key="normal" image="Map"/>
                                                     <connections>
-                                                        <segue destination="x8m-bm-eyx" kind="presentation" identifier="showMap" id="k0o-Eg-A6W"/>
+                                                        <segue destination="x8m-bm-eyx" kind="presentation" identifier="showPlace" id="k0o-Eg-A6W"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -95,16 +95,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tzS-k3-lzH">
-                                                    <rect key="frame" x="16" y="8" width="382" height="62"/>
+                                                    <rect key="frame" x="16" y="8" width="348" height="62"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZp-sK-6sa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="28.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="348" height="28.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Place location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfY-0t-7RX">
-                                                            <rect key="frame" x="0.0" y="33.5" width="382" height="28.5"/>
+                                                            <rect key="frame" x="0.0" y="33.5" width="348" height="28.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
@@ -113,12 +113,25 @@
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsm-MC-rg6">
+                                                    <rect key="frame" x="372" y="45" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="H9k-dd-3ly"/>
+                                                        <constraint firstAttribute="height" constant="22" id="Lzv-2a-sND"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Placeholder"/>
+                                                    <connections>
+                                                        <segue destination="x8m-bm-eyx" kind="presentation" identifier="getAddress" id="aST-f6-DJy"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="tzS-k3-lzH" firstAttribute="top" secondItem="Aws-Mp-Of6" secondAttribute="top" constant="8" id="3Dw-Dw-3Im"/>
                                                 <constraint firstItem="tzS-k3-lzH" firstAttribute="leading" secondItem="Aws-Mp-Of6" secondAttribute="leading" constant="16" id="BdK-up-TeX"/>
+                                                <constraint firstItem="xsm-MC-rg6" firstAttribute="leading" secondItem="tzS-k3-lzH" secondAttribute="trailing" constant="8" id="MV9-Zk-fAV"/>
                                                 <constraint firstAttribute="bottom" secondItem="tzS-k3-lzH" secondAttribute="bottom" constant="5" id="cRp-iU-afd"/>
-                                                <constraint firstAttribute="trailing" secondItem="tzS-k3-lzH" secondAttribute="trailing" constant="16" id="vvI-Xk-Ud5"/>
+                                                <constraint firstItem="xsm-MC-rg6" firstAttribute="centerY" secondItem="sfY-0t-7RX" secondAttribute="centerY" id="gaO-f4-mpV"/>
+                                                <constraint firstItem="xsm-MC-rg6" firstAttribute="trailing" secondItem="Aws-Mp-Of6" secondAttribute="trailingMargin" id="xCt-9j-8th"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -230,11 +243,34 @@
                                     <action selector="closeVC:" destination="x8m-bm-eyx" eventType="touchUpInside" id="9mP-Vr-LAv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-Nb-wSg">
-                                <rect key="frame" x="314" y="708" width="50" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-xf-6Go">
+                                <rect key="frame" x="187" y="381" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="HLb-b8-oUg"/>
-                                    <constraint firstAttribute="height" constant="50" id="I4s-E3-6HW"/>
+                                    <constraint firstAttribute="height" constant="40" id="RSx-Hf-aVH"/>
+                                    <constraint firstAttribute="width" constant="40" id="dww-UQ-0DX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rds-sb-CZ6">
+                                <rect key="frame" x="20" y="166" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-uQ-1Cy">
+                                <rect key="frame" x="172.5" y="720" width="69" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="x8m-bm-eyx" eventType="touchUpInside" id="M4j-rh-Q55"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-Nb-wSg">
+                                <rect key="frame" x="314" y="603" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="HLb-b8-oUg"/>
+                                    <constraint firstAttribute="height" constant="30" id="I4s-E3-6HW"/>
                                 </constraints>
                                 <state key="normal" image="location"/>
                                 <connections>
@@ -244,18 +280,28 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="gpb-uQ-1Cy" secondAttribute="bottom" constant="40" id="Ath-ab-Ne6"/>
+                            <constraint firstItem="rds-sb-CZ6" firstAttribute="leading" secondItem="ZBK-FE-HBI" secondAttribute="leading" constant="20" id="CqW-eP-TLI"/>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="leading" secondItem="ZBK-FE-HBI" secondAttribute="leading" id="JqA-Ct-Mu6"/>
+                            <constraint firstItem="Dnp-xf-6Go" firstAttribute="centerX" secondItem="E4h-3c-O6u" secondAttribute="centerX" id="LUc-Lu-CVV"/>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="EJe-Nb-wSg" secondAttribute="bottom" constant="175" id="Ozg-KR-bDX"/>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="EJe-Nb-wSg" secondAttribute="trailing" constant="70" id="RbJ-jG-SUI"/>
+                            <constraint firstItem="7M3-HL-YVi" firstAttribute="top" secondItem="rds-sb-CZ6" secondAttribute="bottom" constant="-202" id="VHW-un-aa5"/>
                             <constraint firstItem="RS7-IK-2Sq" firstAttribute="top" secondItem="ZBK-FE-HBI" secondAttribute="top" constant="70" id="XIc-JO-nTC"/>
-                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="EJe-Nb-wSg" secondAttribute="trailing" constant="50" id="amo-nO-PjR"/>
-                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="EJe-Nb-wSg" secondAttribute="bottom" constant="50" id="bLg-bM-tpp"/>
+                            <constraint firstItem="gpb-uQ-1Cy" firstAttribute="centerX" secondItem="E4h-3c-O6u" secondAttribute="centerX" id="bUT-of-Ny6"/>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="top" secondItem="E4h-3c-O6u" secondAttribute="top" id="dzo-4z-1lm"/>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="trailing" secondItem="ZBK-FE-HBI" secondAttribute="trailing" id="kQR-Zs-IeZ"/>
                             <constraint firstAttribute="bottom" secondItem="7M3-HL-YVi" secondAttribute="bottom" id="nO7-Ga-D5D"/>
+                            <constraint firstItem="Dnp-xf-6Go" firstAttribute="centerY" secondItem="E4h-3c-O6u" secondAttribute="centerY" constant="-20" id="pC2-3y-XAn"/>
                             <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="RS7-IK-2Sq" secondAttribute="trailing" constant="70" id="rR2-8S-2pN"/>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="rds-sb-CZ6" secondAttribute="trailing" constant="20" id="vHm-IG-plW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBK-FE-HBI"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="rds-sb-CZ6" id="8pO-q3-Ikl"/>
+                        <outlet property="doneButton" destination="gpb-uQ-1Cy" id="y0r-dh-y4X"/>
+                        <outlet property="mapPin" destination="Dnp-xf-6Go" id="8BD-pt-1Gy"/>
                         <outlet property="mapView" destination="7M3-HL-YVi" id="6UJ-JF-md5"/>
                     </connections>
                 </viewController>
@@ -441,14 +487,17 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="Map" width="50" height="50"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="Pin" width="42" height="42"/>
+        <image name="Placeholder" width="22" height="22"/>
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
         <image name="location" width="128" height="128"/>
-        <image name="map" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aST-f6-DJy"/>
         <segue reference="ThI-8V-uZm"/>
     </inferredMetricsTieBreakers>
 </document>
