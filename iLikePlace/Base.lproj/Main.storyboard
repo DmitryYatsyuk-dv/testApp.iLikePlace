@@ -227,7 +227,18 @@
                                 </constraints>
                                 <state key="normal" image="camcel"/>
                                 <connections>
-                                    <action selector="cancelAction:" destination="x8m-bm-eyx" eventType="touchUpInside" id="9mP-Vr-LAv"/>
+                                    <action selector="closeVC:" destination="x8m-bm-eyx" eventType="touchUpInside" id="9mP-Vr-LAv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-Nb-wSg">
+                                <rect key="frame" x="314" y="708" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HLb-b8-oUg"/>
+                                    <constraint firstAttribute="height" constant="50" id="I4s-E3-6HW"/>
+                                </constraints>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation:" destination="x8m-bm-eyx" eventType="touchUpInside" id="afe-OT-caj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -235,6 +246,8 @@
                         <constraints>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="leading" secondItem="ZBK-FE-HBI" secondAttribute="leading" id="JqA-Ct-Mu6"/>
                             <constraint firstItem="RS7-IK-2Sq" firstAttribute="top" secondItem="ZBK-FE-HBI" secondAttribute="top" constant="70" id="XIc-JO-nTC"/>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="EJe-Nb-wSg" secondAttribute="trailing" constant="50" id="amo-nO-PjR"/>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="EJe-Nb-wSg" secondAttribute="bottom" constant="50" id="bLg-bM-tpp"/>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="top" secondItem="E4h-3c-O6u" secondAttribute="top" id="dzo-4z-1lm"/>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="trailing" secondItem="ZBK-FE-HBI" secondAttribute="trailing" id="kQR-Zs-IeZ"/>
                             <constraint firstAttribute="bottom" secondItem="7M3-HL-YVi" secondAttribute="bottom" id="nO7-Ga-D5D"/>
@@ -432,6 +445,7 @@
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="location" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
