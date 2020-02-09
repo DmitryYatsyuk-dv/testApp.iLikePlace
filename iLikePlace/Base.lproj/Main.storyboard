@@ -36,7 +36,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="ZdD-Y2-oHU"/>
                                                         <constraint firstAttribute="height" constant="50" id="rlN-Kb-pJE"/>
                                                     </constraints>
-                                                    <state key="normal" image="Map"/>
+                                                    <state key="normal" image="map-1"/>
                                                     <connections>
                                                         <segue destination="x8m-bm-eyx" kind="presentation" identifier="showPlace" id="k0o-Eg-A6W"/>
                                                     </connections>
@@ -277,11 +277,31 @@
                                     <action selector="centerViewInUserLocation:" destination="x8m-bm-eyx" eventType="touchUpInside" id="afe-OT-caj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bl-Pu-pxP">
+                                <rect key="frame" x="182" y="718" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="F61-Ps-dHR"/>
+                                    <constraint firstAttribute="height" constant="50" id="JQi-IS-5Lc"/>
+                                </constraints>
+                                <state key="normal" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="x8m-bm-eyx" eventType="touchUpInside" id="YM5-Z7-nIn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-b4-Exr">
+                                <rect key="frame" x="12" y="95.5" width="237" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Bl-Pu-pxP" firstAttribute="centerX" secondItem="E4h-3c-O6u" secondAttribute="centerX" id="3HH-Rh-dib"/>
                             <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="gpb-uQ-1Cy" secondAttribute="bottom" constant="40" id="Ath-ab-Ne6"/>
+                            <constraint firstItem="7M3-HL-YVi" firstAttribute="top" secondItem="Ibv-b4-Exr" secondAttribute="bottom" constant="-95.5" id="Ci5-eE-CP3"/>
                             <constraint firstItem="rds-sb-CZ6" firstAttribute="leading" secondItem="ZBK-FE-HBI" secondAttribute="leading" constant="20" id="CqW-eP-TLI"/>
+                            <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="6Bl-Pu-pxP" secondAttribute="bottom" constant="40" id="HKO-x8-m63"/>
                             <constraint firstItem="7M3-HL-YVi" firstAttribute="leading" secondItem="ZBK-FE-HBI" secondAttribute="leading" id="JqA-Ct-Mu6"/>
                             <constraint firstItem="Dnp-xf-6Go" firstAttribute="centerX" secondItem="E4h-3c-O6u" secondAttribute="centerX" id="LUc-Lu-CVV"/>
                             <constraint firstItem="ZBK-FE-HBI" firstAttribute="bottom" secondItem="EJe-Nb-wSg" secondAttribute="bottom" constant="175" id="Ozg-KR-bDX"/>
@@ -294,13 +314,17 @@
                             <constraint firstAttribute="bottom" secondItem="7M3-HL-YVi" secondAttribute="bottom" id="nO7-Ga-D5D"/>
                             <constraint firstItem="Dnp-xf-6Go" firstAttribute="centerY" secondItem="E4h-3c-O6u" secondAttribute="centerY" constant="-20" id="pC2-3y-XAn"/>
                             <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="RS7-IK-2Sq" secondAttribute="trailing" constant="70" id="rR2-8S-2pN"/>
+                            <constraint firstItem="RS7-IK-2Sq" firstAttribute="leading" secondItem="Ibv-b4-Exr" secondAttribute="trailing" constant="65" id="taE-sI-jVo"/>
                             <constraint firstItem="ZBK-FE-HBI" firstAttribute="trailing" secondItem="rds-sb-CZ6" secondAttribute="trailing" constant="20" id="vHm-IG-plW"/>
+                            <constraint firstItem="Ibv-b4-Exr" firstAttribute="leading" secondItem="ZBK-FE-HBI" secondAttribute="leading" constant="12" id="yiP-2f-Lmv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBK-FE-HBI"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="rds-sb-CZ6" id="8pO-q3-Ikl"/>
                         <outlet property="doneButton" destination="gpb-uQ-1Cy" id="y0r-dh-y4X"/>
+                        <outlet property="goButton" destination="6Bl-Pu-pxP" id="5Hd-fZ-0Ff"/>
+                        <outlet property="infoRoute" destination="Ibv-b4-Exr" id="nAl-Oh-0lm"/>
                         <outlet property="mapPin" destination="Dnp-xf-6Go" id="8BD-pt-1Gy"/>
                         <outlet property="mapView" destination="7M3-HL-YVi" id="6UJ-JF-md5"/>
                     </connections>
@@ -487,7 +511,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
-        <image name="Map" width="50" height="50"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Photo" width="195" height="196"/>
         <image name="Pin" width="42" height="42"/>
         <image name="Placeholder" width="22" height="22"/>
@@ -495,6 +519,7 @@
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
         <image name="location" width="128" height="128"/>
+        <image name="map-1" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aST-f6-DJy"/>
