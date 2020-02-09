@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -86,22 +86,62 @@
 		3293850E23E98EF0000123A8 /* iLikePlace */ = {
 			isa = PBXGroup;
 			children = (
-				3293850F23E98EF0000123A8 /* AppDelegate.swift */,
-				3293852323E992AC000123A8 /* MainViewController.swift */,
-				3294A23823E9F5330011F279 /* NewPlaceViewController.swift */,
-				3293852823E9A165000123A8 /* CustomTableViewCell.swift */,
-				327093BC23ED7DC100DBA668 /* MapViewController.swift */,
-				32B9707B23F0683C0034E9BA /* mapManager.swift */,
-				3286857323ECB1EC00D1BCC0 /* RatingControl.swift */,
-				3294A23623E9E2910011F279 /* PlaceModel.swift */,
-				3286857123EC644300D1BCC0 /* StorageManage.swift */,
-				3293851123E98EF0000123A8 /* SceneDelegate.swift */,
-				3293851523E98EF0000123A8 /* Main.storyboard */,
-				3293851823E98EF1000123A8 /* Assets.xcassets */,
-				3293851A23E98EF1000123A8 /* LaunchScreen.storyboard */,
 				3293851D23E98EF1000123A8 /* Info.plist */,
+				32B9707D23F07ACC0034E9BA /* ViewControllers */,
+				32B9707E23F07B280034E9BA /* Models */,
+				32B9707F23F07B410034E9BA /* Helpers */,
+				32B9708023F07B6A0034E9BA /* Support Files */,
+				32B9708123F07BA70034E9BA /* InterfaceBuilder */,
 			);
 			path = iLikePlace;
+			sourceTree = "<group>";
+		};
+		32B9707D23F07ACC0034E9BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3293852823E9A165000123A8 /* CustomTableViewCell.swift */,
+				3293852323E992AC000123A8 /* MainViewController.swift */,
+				3294A23823E9F5330011F279 /* NewPlaceViewController.swift */,
+				327093BC23ED7DC100DBA668 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32B9707E23F07B280034E9BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3294A23623E9E2910011F279 /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		32B9707F23F07B410034E9BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				32B9707B23F0683C0034E9BA /* mapManager.swift */,
+				3286857123EC644300D1BCC0 /* StorageManage.swift */,
+				3286857323ECB1EC00D1BCC0 /* RatingControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		32B9708023F07B6A0034E9BA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3293850F23E98EF0000123A8 /* AppDelegate.swift */,
+				3293851123E98EF0000123A8 /* SceneDelegate.swift */,
+				3293851823E98EF1000123A8 /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		32B9708123F07BA70034E9BA /* InterfaceBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				3293851523E98EF0000123A8 /* Main.storyboard */,
+				3293851A23E98EF1000123A8 /* LaunchScreen.storyboard */,
+			);
+			path = InterfaceBuilder;
 			sourceTree = "<group>";
 		};
 		496A4EE2AB3B1A04CD8EA5A7 /* Frameworks */ = {
@@ -150,7 +190,7 @@
 				};
 			};
 			buildConfigurationList = 3293850723E98EF0000123A8 /* Build configuration list for PBXProject "FavoritePlaces" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
