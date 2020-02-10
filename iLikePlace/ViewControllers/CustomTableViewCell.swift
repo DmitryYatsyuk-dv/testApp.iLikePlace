@@ -26,6 +26,8 @@ class CustomTableViewCell: UITableViewCell {
         }
     }
     
-    
+    deinit {
+        print("deinit", CustomTableViewCell.self)
+    }
 
 }
